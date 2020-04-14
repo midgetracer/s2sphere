@@ -1718,7 +1718,7 @@ def face_xyz_to_uv(face, p):
         if p[face] <= 0:
             return False, 0, 0
     else:
-        if p[face - 3] >= 0:
+        if p[face] - 3 >= 0:
             return False, 0, 0
     u, v = valid_face_xyz_to_uv(face, p)
     return True, u, v
